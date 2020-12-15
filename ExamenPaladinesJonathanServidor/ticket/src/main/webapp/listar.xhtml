@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="template/template.xhtml">
+
+	<ui:define name="title">
+            Listar Ticket
+        </ui:define>
+	<ui:define name="content">
+
+
+
+
+		<h1>Listar Ticket</h1>
+
+
+		<h:dataTable value="#{tcBean.listat}" var="det"
+			class="table">
+
+
+
+			<h:column>
+				<f:facet name="header">Codigo </f:facet>
+                        #{det.idticket}
+                </h:column>
+
+
+			<br />
+			<br />
+
+			<h:column>
+
+				<f:facet name="header">Fecha</f:facet>
+                        #{det.fechaingreso}
+                </h:column>
+		
+                
+                <br />
+			<br />
+
+
+			<h:column>
+				<f:facet name="header">Placa</f:facet>
+                        #{det.auto.placa}
+                </h:column>
+			
+			
+			 <br />
+			<br />
+
+
+			<h:column>
+				<f:facet name="header">Modelo</f:facet>
+                        #{det.auto.modelo}
+                </h:column>
+
+<br />
+			<br />
+
+
+			<h:column>
+				<f:facet name="header">Marca</f:facet>
+                        #{det.auto.marca}
+                </h:column>
+
+		</h:dataTable>
+
+	</ui:define>
+</ui:composition>
+
+
+</html>

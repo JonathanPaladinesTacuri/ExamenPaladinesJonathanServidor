@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ec.edu.ups.appdis</groupId>
+    <artifactId>ClienteRemoto</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+      <dependencyManagement>
+        <dependencies>
+        	<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-ejb-client-bom 
+			<dependency>
+			    <groupId>org.wildfly</groupId>
+			    <artifactId>wildfly-ejb-client-bom</artifactId>
+			    <version>14.0.1.Final</version>
+			    <type>pom</type>
+			</dependency>
+			-->
+			
+			<dependency>
+		         <groupId>org.wildfly</groupId>
+		         <artifactId>wildfly-ejb-client-bom</artifactId>
+		         <version>14.0.1.Final</version>
+		         <type>pom</type>
+		         <scope>import</scope>
+		      </dependency>
+                      
+                    
+        </dependencies>
+  </dependencyManagement>
+  
+  <dependencies>  
+  	<!-- https://mvnrepository.com/artifact/org.jboss/jboss-ejb-client 
+	<dependency>
+	    <groupId>org.jboss</groupId>
+	    <artifactId>jboss-ejb-client</artifactId>
+	    <version>4.0.12.Final</version>
+	</dependency>
+	-->
+	
+	<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-client-all 
+	<dependency>
+	    <groupId>org.wildfly</groupId>
+	    <artifactId>wildfly-client-all</artifactId>
+	    <version>14.0.0.Final</version>
+	</dependency>
+	-->
+
+   <dependency>
+      <groupId>org.wildfly</groupId>
+      <artifactId>wildfly-naming</artifactId>
+      <version>14.0.1.Final</version>
+   </dependency>
+   
+   <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>4.1.0.Final</version>
+</dependency>
+
+
+ 
+   <!-- JBoss EJB client API jar. We use runtime scope because the EJB client 
+         API isn't directly used in this example. We just need it in our runtime classpath -->
+   <dependency>
+      <groupId>org.jboss</groupId>
+      <artifactId>jboss-ejb-client</artifactId>
+      <scope>runtime</scope>
+   </dependency>
+   
+   <dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-client-common</artifactId>                  
+</dependency>
+<dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-naming-client</artifactId>                 
+ </dependency>
+	
+  </dependencies>
+
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+</project>
